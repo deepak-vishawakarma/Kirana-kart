@@ -25,7 +25,10 @@ import ConnectDB from "./Config/ConnectDB.js"
 const app = express();
 const port = process.env.PORT;
 
-app.use((cors()))
+app.use(cors({
+    origin:process.env.FRONTEND_URL,
+    credintial:true,
+}))
 app.use(bodyParser.json());
 
 ConnectDB()
