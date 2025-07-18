@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchCategories = createAsyncThunk('categories/fetch', async () => {
-  const res = await axios.get("http://localhost:5500/api/Categories/data");
+  const res = await axios.get("https://kirana-kart.onrender.com/api/Categories/data");
   return res.data;
 });
 
