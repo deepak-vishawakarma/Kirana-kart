@@ -39,7 +39,7 @@ export default function Products({ search }) {
 
   const handleAddToCart = async (productId) => {
     try {
-      await axios.post("http://localhost:5500/api/cart", {
+      await axios.post("https://kirana-kart.onrender.com/api/cart", {
         userId: user?.id,
         product: productId,
       });
