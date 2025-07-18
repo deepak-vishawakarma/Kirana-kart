@@ -18,7 +18,7 @@ export default function Authform() {
     };
 
     try {
-      const Res = await axios.post('http://localhost:5500/Admin/User/Signup', SignupData);
+      const Res = await axios.post('https://kirana-kart.onrender.com/Admin/User/Signup', SignupData);
       console.log("Signup Success:", Res.data);
       localStorage.setItem("admin", JSON.stringify(Res.data));
       localStorage.setItem("token", Res.data.token);
@@ -40,7 +40,7 @@ export default function Authform() {
     };
 
     try {
-      const Res = await axios.post('http://localhost:5500/Admin/User/Login', logindata);
+      const Res = await axios.post('https://kirana-kart.onrender.com/Admin/User/Login', logindata);
       console.log("Login Success:", Res.data);
       localStorage.setItem("admin", JSON.stringify(Res.data));
       localStorage.setItem("token", Res.data.token);
