@@ -17,7 +17,7 @@ export default function SignUp() {
       password: e.target.password.value,
     };
     try {
-      const Res = await axios.post('http://localhost:5500/User/Signup', SignupData);
+      const Res = await axios.post('https://kirana-kart.onrender.com/User/Signup', SignupData);
       console.log("Signup Success:", Res.data);
       localStorage.setItem("user", JSON.stringify(Res.data));
       localStorage.setItem("token", Res.data.token);
@@ -40,7 +40,7 @@ export default function SignUp() {
     };
 
     try {
-      const Res = await axios.post('http://localhost:5500/User/Login', logindata);
+      const Res = await axios.post('https://kirana-kart.onrender.com/User/Login', logindata);
       console.log("Login Success:", Res.data);
       localStorage.setItem("user", JSON.stringify(Res.data));
       localStorage.setItem("token", Res.data.token);
