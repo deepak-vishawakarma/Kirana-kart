@@ -12,7 +12,7 @@ export default function Checkout() {
   useEffect(() => {
     async function fetchProduct() {
       try {
-        const res = await axios.get(`http://localhost:5500/api/product/data/${id}`);
+        const res = await axios.get(`https://kirana-kart.onrender.com/api/product/data/${id}`);
         setProduct(res.data);
       } catch (error) {
         console.error("Error fetching product:", error);
@@ -25,7 +25,7 @@ export default function Checkout() {
     if (!user) return alert("Please login first");
 
     try {
-      const res = await axios.post("http://localhost:5500/api/order", {
+      const res = await axios.post("https://kirana-kart.onrender.com/api/order", {
         userId: user.id,
         productId: product._id,
         address: address || "Default Address",
