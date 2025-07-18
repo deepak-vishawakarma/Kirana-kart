@@ -12,7 +12,7 @@ export default function Categories() {
   }, []);
 
   async function fetchData() {
-    const res = await axios.get("http://localhost:5500/api/Categories/data");
+    const res = await axios.get("https://kirana-kart.onrender.com/api/Categories/data");
     setCategories(res.data);
   }
 
@@ -23,7 +23,7 @@ export default function Categories() {
     formData.append("image", e.target.image.files[0]);
     formData.append("CategorieDiscriptions", e.target.desc.value);
 
-    await axios.post("http://localhost:5500/api/Categories/data", formData, {
+    await axios.post("https://kirana-kart.onrender.com/api/Categories/data", formData, {
       headers: { "Content-Type": "multipart/form-data" },
     });
 
@@ -44,7 +44,7 @@ export default function Categories() {
 
   formData.append("CategorieDiscriptions", e.target.desc.value); // 🔄 Must match textarea name
 
-  await axios.put(`http://localhost:5500/api/Categories/data/${editData._id}`, formData, {
+  await axios.put(`https://kirana-kart.onrender.com/api/Categories/data/${editData._id}`, formData, {
     headers: { 'Content-Type': 'multipart/form-data' }
   });
 
@@ -54,7 +54,7 @@ export default function Categories() {
 
 
   async function handleDelete(id) {
-    await axios.delete(`http://localhost:5500/api/Categories/data/${id}`);
+    await axios.delete(`https://kirana-kart.onrender.com/api/Categories/data/${id}`);
     fetchData();
   }
 
