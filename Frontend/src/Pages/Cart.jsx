@@ -10,7 +10,7 @@ export default function Cart() {
   const getCart = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5500/api/cart/${user.id}`
+        `https://kirana-kart.onrender.com/api/cart/${user.id}`
       );
       setCartData(response.data);
     } catch (error) {
