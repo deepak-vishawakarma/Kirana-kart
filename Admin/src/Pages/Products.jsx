@@ -15,12 +15,12 @@ export default function Products() {
   }, []);
 
   async function fetchCategories() {
-    const res = await axios.get("http://localhost:5500/api/Categories/data");
+    const res = await axios.get("https://kirana-kart.onrender.com/api/Categories/data");
     setCategories(res.data);
   }
 
   async function fetchProducts() {
-    const res = await axios.get("http://localhost:5500/api/product/data");
+    const res = await axios.get("https://kirana-kart.onrender.com/api/product/data");
     setProducts(res.data);
   }
 
@@ -35,7 +35,7 @@ export default function Products() {
     formData.append("ProductPrice", e.target.ProductPrice.value);
     formData.append("ProductCetagorie", e.target.ProductCetagorie.value);
 
-    await axios.post("http://localhost:5500/api/product/data", formData, {
+    await axios.post("https://kirana-kart.onrender.com/api/product/data", formData, {
       headers: { "Content-Type": "multipart/form-data" },
     });
 
@@ -59,7 +59,7 @@ export default function Products() {
     }
 
     await axios.put(
-      `http://localhost:5500/api/product/data/${editData._id}`,
+      `https://kirana-kart.onrender.com/api/product/data/${editData._id}`,
       formData,
       { headers: { "Content-Type": "multipart/form-data" } }
     );
@@ -69,7 +69,7 @@ export default function Products() {
   }
 
   async function handleDelete(id) {
-    await axios.delete(`http://localhost:5500/api/product/data/${id}`);
+    await axios.delete(`https://kirana-kart.onrender.com/api/product/data/${id}`);
     fetchProducts();
   }
 
