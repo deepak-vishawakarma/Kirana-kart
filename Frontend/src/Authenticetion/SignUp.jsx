@@ -57,7 +57,7 @@ export default function SignUp() {
   // ✅ Login Form
   const LoginForm = () => (
     <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
-      <h2 className="text-2xl font-bold text-center mb-6">Admin Login</h2>
+      <h2 className="text-2xl font-bold text-center mb-6">User Login</h2>
 
       <form className="space-y-4" onSubmit={HandleLogin}>
         <div>
@@ -103,7 +103,7 @@ export default function SignUp() {
   // ✅ Signup Form
   const SignupForm = () => (
     <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
-      <h2 className="text-2xl font-bold text-center mb-6">Admin Signup</h2>
+      <h2 className="text-2xl font-bold text-center mb-6">User Signup</h2>
 
       <form className="space-y-4" onSubmit={HandleSignup}>
         <div>
