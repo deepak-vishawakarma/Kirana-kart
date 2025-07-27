@@ -78,6 +78,7 @@ export default function SignUp() {
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter password"
           />
+           <p className='w-full px-3 py-2'>Maximum 8 Characters</p>
         </div>
 
         <button
@@ -150,6 +151,7 @@ export default function SignUp() {
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter password"
           />
+           <p className='w-full px-3 py-2'>Maximum 8 Characters</p>
         </div>
 
         <button
